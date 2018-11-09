@@ -73,7 +73,7 @@ def get_results(username, password):
 	"""
 
 	# load up the browser
-	driver = webdriver.PhantomJS()
+	driver = webdriver.ChromeDriver()
 	driver.set_window_size(1120, 550)
 
 	# go to the results page and enter the username and password
