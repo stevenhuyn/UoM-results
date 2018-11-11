@@ -16,14 +16,14 @@ The results-checking script needs two files to be placed within the **results** 
 
 ```
 farrugiam
-pAS5w0rd!1
+un1melBpAS5w0rd!1
 ```
 
 **email.txt** uses the same structure, but should contain the gmail username of the account you want to use to email the results, and its gmail password on the second line. An example **email.txt** file for the gmail address `results.robot@gmail.com` would be:
 
 ```
 results.robot
-pAS5w0rd!1
+em@ilpAS5w0rd!1
 ```
 
 > Note: only the part of the email address before the `@gmail.com` is included in the file.
