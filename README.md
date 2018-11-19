@@ -4,11 +4,13 @@ Periodically checks my.unimelb results page for new results and sends an email w
 
 By Matt Farrugia
 
+Modified by Steven Nguyen for his own setup
+
 ## Dependencies
 
 Requires python modules [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), [html5lib](https://github.com/html5lib/), and [Selenium](http://docs.seleniumhq.org/). You can install these dependencies with [pip](https://pypi.python.org/pypi/pip) using `pip install -r path/to/repo/requirements.txt`.
 
-[ChromeDriver](http://chromedriver.chromium.org/downloads)
+[ChromeDriver](http://chromedriver.chromium.org/downloads) This is the driver
 
 ## Usage
 
@@ -30,13 +32,3 @@ em@ilpAS5w0rd!1
 
 After these files have been added to the **results** directory, you should be able to run the script from within that directory with `python main.py`. If the WAM on your results page is different from the number in **results/wam.txt**, you'll receive an email at `username@student.unimelb.edu.au` where `username` is the name in the first line of **results/login.txt**.
 
-
-Finally, you probably want to run the script periodically. When executed from within the **results** directory, the bash script **results/run.sh** will run **main.py** forever, pausing for 300 seconds between each run. So, you should be able to run, background and disown the script to have it run forever:
-
-```
-results/ $ bash run.sh > output.txt &
-results/ $ disown %J
-```
-where J is the job number shown when you background `bash run.sh`
-
-> Note: don't forget to stop it after all final results release date! In bash, you can `kill` a disowned script using its process ID, which can be found using `ps -x`. Make sure you use the ID of `bash run.sh`, not `sleep 300` or `python main.py`.
