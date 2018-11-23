@@ -4,8 +4,6 @@ Periodically checks my.unimelb results page for new results and sends an email w
 
 By Matt Farrugia
 
-Modified by Steven Nguyen for his own setup
-
 ## Dependencies
 
 Requires python modules [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/), [html5lib](https://github.com/html5lib/), and [Selenium](http://docs.seleniumhq.org/). You can install these dependencies with [pip](https://pypi.python.org/pypi/pip) using `pip install -r path/to/repo/requirements.txt`.
